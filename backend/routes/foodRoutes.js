@@ -294,7 +294,7 @@ router.get("/foods", async (req, res) => {
 
     if (req.query.type) query.type = req.query.type;
     if (req.query.maxCost) query.cost = { $lte: Number(req.query.maxCost) };
-    if (req.query.vegetarian) query.vegetarian = req.query.vegetarian;
+    if (req.query.foodType) query.foodType = req.query.foodType;
     if (req.query.dineIn) query.dineIn = req.query.dineIn === "true";
     if (req.query.takeaway) query.takeaway = req.query.takeaway === "true";
 
