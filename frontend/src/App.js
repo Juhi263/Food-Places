@@ -11,16 +11,20 @@ function App() {
     dineIn: "",
     takeaway: "",
   });
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
 
   useEffect(() => {
-    fetchFoods();
-  }, []);
+    fetchFoods(foodFilters, currentPage);
+  }, [currentPage]);
 
-  const fetchFoods = async (filterParams = {}) => {
+  const fetchFoods = async (filterParams = {}, page = 1) => {
     try {
-      const query = new URLSearchParams(filterParams).toString();
+      const params = { ...filterParams, page, limit: 10 };
+      const query = new URLSearchParams(params).toString();
       const response = await axios.get(`http://localhost:5000/api/foods?${query}`);
-      setFoodPlaces(response.data);
+      setFoodPlaces(response.data.data);
+      setTotalPages(response.data.totalPages);
     } catch (error) {
       console.error("Error fetching food places:", error);
     }
@@ -31,7 +35,8 @@ function App() {
   };
 
   const applyFoodFilters = () => {
-    fetchFoods(foodFilters);
+    setCurrentPage(1); // Reset to first page on filter apply
+    fetchFoods(foodFilters, 1);
   };
 
   return (
@@ -107,6 +112,25 @@ function App() {
             </div>
           ))
         )}
+      </div>
+
+      {/* Pagination Controls */}
+      <div className="pagination">
+        <button
+          onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+          disabled={currentPage === 1}
+        >
+          Prev
+        </button>
+        <span style={{ margin: "0 10px" }}>
+          Page {currentPage} of {totalPages}
+        </span>
+        <button
+          onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
+          disabled={currentPage === totalPages}
+        >
+          Next
+        </button>
       </div>
     </div>
   );
