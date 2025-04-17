@@ -15,6 +15,7 @@ const foodData = [
     dineIn: true,
     dineOut: true,
     takeaway: true,
+    link:"https://www.zomato.com/jodhpur/the-plant-story-sardarpura/order",
   },
   {
     name: "White Earth",
@@ -28,6 +29,7 @@ const foodData = [
     dineIn: false,
     dineOut: true,
     takeaway: true,
+    link:"https://www.zomato.com/jodhpur/white-earth-a-rooftop-restaurant-cafe-ratanada/order",
   },
   {
     name: "Café Frespresso and 360 wood fire pizzeria",
@@ -41,6 +43,7 @@ const foodData = [
     dineIn: true,
     dineOut: false,
     takeaway: true,
+    link:"https://www.zomato.com/jodhpur/cafe-frespresso-ratanada/order",
   },
   {
     name: "Janta Sweet Home",
@@ -54,6 +57,7 @@ const foodData = [
     dineIn: true,
     dineOut: false,
     takeaway: true,
+    link:"https://www.zomato.com/jodhpur/janta-sweet-home-3-rawaton-ka-bass/order",
   },
   {
     name: "Indique",
@@ -67,6 +71,7 @@ const foodData = [
     dineIn: true,
     dineOut: true,
     takeaway: true,
+    link:"https://www.zomato.com/jodhpur/indique-rawaton-ka-bass/order",
   },
   {
     name: "Shaandar Restaurant",
@@ -80,6 +85,7 @@ const foodData = [
     dineIn: true,
     dineOut: false,
     takeaway: true,
+    link:"https://www.zomato.com/jodhpur/shandar-sweet-home-rawaton-ka-bass",
   },
   {
     name: "Gypsy Restaurant",
@@ -93,6 +99,7 @@ const foodData = [
     dineIn: true,
     dineOut: false,
     takeaway: true,
+    link:"https://www.zomato.com/jodhpur/gypsy-sardarpura/order",
   },
   {
     name: "On The Rocks",
@@ -106,6 +113,7 @@ const foodData = [
     dineIn: true,
     dineOut: true,
     takeaway: true,
+    link:"https://www.zomato.com/jodhpur/on-the-rocks-cantt-area/order",
   },
   {
     name: "The Laughing B Café",
@@ -119,6 +127,7 @@ const foodData = [
     dineIn: true,
     dineOut: false,
     takeaway: true,
+    link:"https://www.zomato.com/jodhpur/the-laughing-b-ratanada",
   },
   {
     name: "Chaturbhuj Rameshchand",
@@ -132,6 +141,7 @@ const foodData = [
     dineIn: false,
     dineOut: true,
     takeaway: true,
+    link:"https://www.zomato.com/jodhpur/chaturbhuj-rameshchandra-kabir-nagar",
   },
   {
     name: "Highway Delight",
@@ -145,6 +155,7 @@ const foodData = [
     dineIn: true,
     dineOut: true,
     takeaway: true,
+    link:"https://www.zomato.com/jodhpur/highway-delight-basni",
   },
   {
     name: "Stepwell Café",
@@ -158,6 +169,7 @@ const foodData = [
     dineIn: true,
     dineOut: true,
     takeaway: true,
+    link:"https://www.zomato.com/jodhpur/stepwell-cafe-rawaton-ka-bass/order",
   },
   {
     name: "Pokar Sweet Home",
@@ -171,6 +183,7 @@ const foodData = [
     dineIn: false,
     dineOut: true,
     takeaway: true,
+    link:"https://www.zomato.com/jodhpur/pokar-sweet-home-1-sardarpura/order",
   },
   {
     name: "Maharaja bhog kitchen",
@@ -184,6 +197,7 @@ const foodData = [
     dineIn: true,
     dineOut: false,
     takeaway: true,
+    link:"https://www.zomato.com/jodhpur/maharaja-bhog-kitchen-lawaran/order",
   },
   {
     name: "Sankalp Restaurant",
@@ -197,6 +211,7 @@ const foodData = [
     dineIn: true,
     dineOut: false,
     takeaway: true,
+    link:"https://www.zomato.com/jodhpur/sankalp-sardarpura",
   },
   {
     name: "Shri Mishrilal Hotel",
@@ -210,6 +225,7 @@ const foodData = [
     dineIn: true,
     dineOut: false,
     takeaway: true,
+    link:"https://www.zomato.com/jodhpur/shri-mishrilal-hotel-rawaton-ka-bass/order",
   },
   {
     name: "Choudhary Namkeen",
@@ -223,6 +239,7 @@ const foodData = [
     dineIn: false,
     dineOut: false,
     takeaway: true,
+    link:"https://www.zomato.com/jodhpur/choudhary-namkeen-1-sardarpura/order",
   },
   {
     name: "Jhankar Choti Haveli",
@@ -236,6 +253,7 @@ const foodData = [
     dineIn: true,
     dineOut: true,
     takeaway: false,
+    link:"https://www.zomato.com/jodhpur/jhankar-choti-haveli-kabir-nagar",
   },
   {
     name: "Indigo Restaurant",
@@ -249,6 +267,7 @@ const foodData = [
     dineIn: true,
     dineOut: true,
     takeaway: false,
+    link:"https://www.zomato.com/jodhpur/indigo-restaurant-rawaton-ka-bass/order",
   },
   {
     name: "The Curry's",
@@ -262,6 +281,7 @@ const foodData = [
     dineIn: true,
     dineOut: true,
     takeaway: false,
+    link:"https://www.zomato.com/jodhpur/the-currys-kabir-nagar/order",
   },
 ];
 

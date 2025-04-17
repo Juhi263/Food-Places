@@ -12,6 +12,7 @@ const foodSchema = new mongoose.Schema({
   dineIn: Boolean,
   dineOut: Boolean,
   takeaway: Boolean,
+  link:String,
 });
 
 module.exports = mongoose.model("Food", foodSchema);
