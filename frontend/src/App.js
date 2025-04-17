@@ -98,6 +98,12 @@ function App() {
               <p><strong>Food Type:</strong> {place.foodType}</p>
               <p><strong>Dine In:</strong> {place.dineIn ? "Yes" : "No"}</p>
               <p><strong>Takeaway:</strong> {place.takeaway ? "Yes" : "No"}</p>
+              <p>
+                <strong>Website:</strong>{" "}
+                <a href={place.link} target="_blank" rel="noopener noreferrer">
+                  Visit Site
+                </a>
+              </p>
             </div>
           ))
         )}
