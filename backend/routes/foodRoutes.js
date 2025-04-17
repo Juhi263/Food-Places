@@ -307,7 +307,6 @@ router.post("/populate", async (req, res) => {
   }
 });
 
-// API to filter food places
 router.get("/foods", async (req, res) => {
   try {
     let query = {};
@@ -318,11 +317,23 @@ router.get("/foods", async (req, res) => {
     if (req.query.dineIn) query.dineIn = req.query.dineIn === "true";
     if (req.query.takeaway) query.takeaway = req.query.takeaway === "true";
 
-    const foods = await Food.find(query);
-    res.json(foods);
+    const page = parseInt(req.query.page) || 1;
+    const limit = parseInt(req.query.limit) || 10;
+    const skip = (page - 1) * limit;
+
+    const totalCount = await Food.countDocuments(query);
+    const foods = await Food.find(query).skip(skip).limit(limit);
+
+    res.json({
+      data: foods,
+      currentPage: page,
+      totalPages: Math.ceil(totalCount / limit),
+      totalCount,
+    });
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
 });
+
 
 module.exports = router;
